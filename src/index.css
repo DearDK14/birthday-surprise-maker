@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: linear-gradient(180deg, #0A0E2A 0%, #121A4A 28%, #3B1638 52%, #8A1229 76%, #C8102E 100%);
+    background-attachment: fixed;
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    min-height: 100vh;
+  }
+
+  /* Custom scrollbar in RCB Flame Red & Gold luxury theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0A0E2A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C8102E;
+  }
+}
+
+/* RCB Jersey Shaded Background Utility */
+.bg-rcb-jersey {
+  background: linear-gradient(180deg, #0A0E2A 0%, #121A4A 28%, #3B1638 52%, #8A1229 76%, #C8102E 100%);
+}
+
+.bg-rcb-jersey-fixed {
+  background: linear-gradient(180deg, #0A0E2A 0%, #121A4A 28%, #3B1638 52%, #8A1229 76%, #C8102E 100%);
+  background-attachment: fixed;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', 'Great Vibes', cursive;
+}
+
+/* Glassmorphism luxury utility classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.glass-panel-dark {
+  background: rgba(17, 17, 17, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.glass-panel-gold {
+  background: rgba(247, 231, 180, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+/* 3D transforms */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Confetti particles */
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-15px) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+.animate-confetti {
+  animation: floatParticle 6s ease-in-out infinite;
+}
